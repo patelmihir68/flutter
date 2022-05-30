@@ -57,159 +57,165 @@ class _ProfilePageState extends State<ProfilePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        //title: Text(widget.title)
-        backgroundColor: Colors.white,
-        leading:IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        elevation: 0,
-        actions:  <Widget>[
-          Padding(
-              padding: const EdgeInsets.only(right: 20.0),
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          //title: Text(widget.title)
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          elevation: 0,
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0),
               child: IconButton(
                 icon: const Icon(Icons.create, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-          ),
-        ],
-      ),
-      body:Column(children: <Widget>[
-      Row(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-
-        children: <Widget>[
-
-            Container(
-              decoration:BoxDecoration(
-                  borderRadius:BorderRadius.circular(10),
-                  color:Colors.green
-              ),
-              child: Container(
-                height: 120.0,
-                width: 120.0,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                        'assets/images/xyz.jpg'),
-                    fit: BoxFit.fill,
-                  ),
-                  shape: BoxShape.circle,
-                ),
-
-              ),
             ),
-            Container(
-                decoration:const BoxDecoration( ),
-                child: RichText(
-                  textAlign: TextAlign.center,
-                  text: const TextSpan(
-                    style: TextStyle(
-                      fontSize: 36.0,
-                      color: Colors.black,
+          ],
+        ),
+        body: Column(children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              // Center is a layout widget. It takes a single child and positions it
+              // in the middle of the parent.
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.green),
+                  child: Container(
+                    height: 120.0,
+                    width: 120.0,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/xyz.jpg'),
+                        fit: BoxFit.fill,
+                      ),
+                      shape: BoxShape.circle,
                     ),
-                    children: <TextSpan>[
-                      TextSpan(text: '104\n', style: TextStyle(fontWeight: FontWeight.bold)),
-                      TextSpan(text: 'Design posted', style: TextStyle(fontSize: 16.0)),
-                    ],
+                  ),
+                ),
+                Container(
+                    decoration: const BoxDecoration(),
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: const TextSpan(
+                        style: TextStyle(
+                          fontSize: 36.0,
+                          color: Colors.black,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '104\n',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          TextSpan(
+                              text: 'Design posted',
+                              style: TextStyle(fontSize: 16.0)),
+                        ],
+                      ),
+                    )),
+                Container(
+                    decoration: const BoxDecoration(),
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: const TextSpan(
+                        style: TextStyle(
+                          fontSize: 36.0,
+                          color: Colors.black,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: '12\n',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          TextSpan(
+                              text: 'Board created',
+                              style: TextStyle(fontSize: 16.0)),
+                        ],
+                      ),
+                    ))
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(children: const <Widget>[
+              Icon(Icons.phone),
+              Text("+91 9408448479")
+            ]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(children: const <Widget>[
+              Icon(Icons.email),
+              Text("mihir.patel@dhiwise.com")
+            ]),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15.0),
+            child: Row(
+              // Center is a layout widget. It takes a single child and positions it
+              // in the middle of the parent.
+
+              children: <Widget>[
+                Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                        top: BorderSide(color: Colors.black, width: 2),
+                        right: BorderSide(color: Colors.black, width: 2),
+                        bottom: BorderSide(color: Colors.black, width: 2)),
+                  ),
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      style: TextStyle(
+                        fontSize: 36.0,
+                        color: Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: "\$2084\n",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: 'Balance', style: TextStyle(fontSize: 16.0)),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    border: Border(
+                        top: BorderSide(color: Colors.black, width: 2),
+                        left: BorderSide(color: Colors.black, width: 2),
+                        bottom: BorderSide(color: Colors.black, width: 2)),
+                  ),
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      style: TextStyle(
+                        fontSize: 36.0,
+                        color: Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: "14\n",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: 'Order', style: TextStyle(fontSize: 16.0)),
+                      ],
+                    ),
                   ),
                 )
+              ],
             ),
-            Container(
-              decoration:const BoxDecoration(
-              ),
-              child: RichText(
-                textAlign: TextAlign.center,
-                text: const TextSpan(
-                  style: TextStyle(
-                    fontSize: 36.0,
-                    color: Colors.black,
-                  ),
-                  children: <TextSpan>[
-                    TextSpan(text: '12\n', style: TextStyle(fontWeight: FontWeight.bold)),
-                    TextSpan(text: 'Board created', style: TextStyle(fontSize: 16.0)),
-                  ],
-                ),
-              )
-            )
-          ],
-      ),
-        Row( children: const <Widget>[
-          Icon(Icons.phone),
-          Text("+91 9408448479")
-        ]
-        ),
-        Row( children: const <Widget>[
-          Icon(Icons.email),
-          Text("mihir.patel@dhiwise.com")
-        ]
-        ),
-        Row(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-
-          children: <Widget>[
-            Container(
-              decoration: const BoxDecoration(
-                  border: Border(
-                    top: BorderSide(color: Colors.black, width: 2),
-                    right: BorderSide(color: Colors.black, width: 2),
-                    bottom: BorderSide(color: Colors.black, width: 2)
-                  ),
-              ),
-              child:   RichText(
-                textAlign: TextAlign.center,
-                text: const TextSpan(
-                  style: TextStyle(
-                    fontSize: 36.0,
-                    color: Colors.black,
-                  ),
-                  children: <TextSpan>[
-                    TextSpan(text: "\$2084\n", style: TextStyle(fontWeight: FontWeight.bold)),
-                    TextSpan(text: 'Balance', style: TextStyle(fontSize: 16.0)),
-                  ],
-                ),
-              ),
-            ),
-
-            Container(
-
-
-              decoration: const BoxDecoration(
-                border: Border(
-                    top: BorderSide(color: Colors.black, width: 2),
-                    left: BorderSide(color: Colors.black, width: 2),
-                    bottom: BorderSide(color: Colors.black, width: 2)
-                ),
-              ),
-              child: RichText(
-              textAlign: TextAlign.center,
-              text: const TextSpan(
-                style: TextStyle(
-                  fontSize: 36.0,
-                  color: Colors.black,
-                ),
-                children: <TextSpan>[
-                  TextSpan(text: "14\n", style: TextStyle(fontWeight: FontWeight.bold)),
-                  TextSpan(text: 'Order', style: TextStyle(fontSize: 16.0)),
-                ],
-              ),
-            ),
-            )
-          ],
-        ),
-        Row(
-
-        )
-
-      ]
-      )
-    );
+          ),
+          Row()
+        ]));
   }
 }
